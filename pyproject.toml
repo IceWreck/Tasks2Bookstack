@@ -1,0 +1,31 @@
+[project]
+name = "tasks2bookstack"
+version = "0.1.0"
+description = "CalDAV Tasks 2 Bookstack Sync"
+readme = "README.md"
+authors = [
+    { name = "Anchit Bajaj", email = "ab@abifog.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+]
+
+[project.scripts]
+tasks2bookstack = "tasks2bookstack.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+[tool.pyright]
+typeCheckingMode = "standard"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.17.1",
+]

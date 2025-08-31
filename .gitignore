@@ -1,0 +1,10 @@
+/drafts
+/data
+/build
+/.env
+__pycache__
+.aider*
+CONVENTIONS.md
+GEMINI.md
+QWEN.md
+.continue
