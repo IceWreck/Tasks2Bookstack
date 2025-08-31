@@ -34,7 +34,7 @@ def main() -> None:
         logger.info("no tasks found, nothing to do")
         return
 
-    content = "# Tasks\n\n" + "\n".join(f"- [ ] {task}" for task in tasks)
+    content = caldav_client.as_markdown(tasks)
 
     bookstack_client = BookStackClient(config.bookstack)
     bookstack_client.update_page(content)

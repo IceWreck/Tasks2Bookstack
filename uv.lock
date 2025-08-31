@@ -433,6 +433,7 @@ source = { editable = "." }
 dependencies = [
     { name = "caldav" },
     { name = "httpx" },
+    { name = "icalendar" },
     { name = "pydantic" },
     { name = "pyyaml" },
 ]
@@ -440,6 +441,7 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "mypy" },
+    { name = "types-icalendar" },
     { name = "types-pyyaml" },
 ]
 
@@ -447,6 +449,7 @@ dev = [
 requires-dist = [
     { name = "caldav", specifier = ">=2.0.1" },
     { name = "httpx", specifier = ">=0.28.1" },
+    { name = "icalendar", specifier = ">=6.3.1" },
     { name = "pydantic", specifier = ">=2.11.7" },
     { name = "pyyaml", specifier = ">=6.0.2" },
 ]
@@ -454,7 +457,39 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "mypy", specifier = ">=1.17.1" },
+    { name = "types-icalendar", specifier = ">=6.3.1.20250822" },
     { name = "types-pyyaml", specifier = ">=6.0.12.20250822" },
+]
+
+[[package]]
+name = "types-icalendar"
+version = "6.3.1.20250822"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "types-python-dateutil" },
+    { name = "types-pytz" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ce/98/a993422a2ab89d949fb465e71fea0b82827a08360df13188e7e7d7913227/types_icalendar-6.3.1.20250822.tar.gz", hash = "sha256:66cc2017eb651b924a94bbdc3c0bc5fc6349c8a2a039a564780f0eaea53df9c9", size = 17992, upload-time = "2025-08-22T03:03:58.596Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7c/48/3c4e90871a522e6235b7d797619da7d8e338481d86ad19aa957361529254/types_icalendar-6.3.1.20250822-py3-none-any.whl", hash = "sha256:8a1d49dfc5c7080749bee88a3dab0f5f10804954ac79478d8a9e149c3dfaac1e", size = 23054, upload-time = "2025-08-22T03:03:57.711Z" },
+]
+
+[[package]]
+name = "types-python-dateutil"
+version = "2.9.0.20250822"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/0c/0a/775f8551665992204c756be326f3575abba58c4a3a52eef9909ef4536428/types_python_dateutil-2.9.0.20250822.tar.gz", hash = "sha256:84c92c34bd8e68b117bff742bc00b692a1e8531262d4507b33afcc9f7716cd53", size = 16084, upload-time = "2025-08-22T03:02:00.613Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ab/d9/a29dfa84363e88b053bf85a8b7f212a04f0d7343a4d24933baa45c06e08b/types_python_dateutil-2.9.0.20250822-py3-none-any.whl", hash = "sha256:849d52b737e10a6dc6621d2bd7940ec7c65fcb69e6aa2882acf4e56b2b508ddc", size = 17892, upload-time = "2025-08-22T03:01:59.436Z" },
+]
+
+[[package]]
+name = "types-pytz"
+version = "2025.2.0.20250809"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/07/e2/c774f754de26848f53f05defff5bb21dd9375a059d1ba5b5ea943cf8206e/types_pytz-2025.2.0.20250809.tar.gz", hash = "sha256:222e32e6a29bb28871f8834e8785e3801f2dc4441c715cd2082b271eecbe21e5", size = 10876, upload-time = "2025-08-09T03:14:17.453Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/db/d0/91c24fe54e565f2344d7a6821e6c6bb099841ef09007ea6321a0bac0f808/types_pytz-2025.2.0.20250809-py3-none-any.whl", hash = "sha256:4f55ed1b43e925cf851a756fe1707e0f5deeb1976e15bf844bcaa025e8fbd0db", size = 10095, upload-time = "2025-08-09T03:14:16.674Z" },
 ]
 
 [[package]]
