@@ -7,9 +7,12 @@ IMAGE_NAME = code.abifog.com/packages/tasks2bookstack:latest
 
 .PHONY: *
 
-build:
+pex:
 	uv pip compile pyproject.toml > requirements.txt
 	uvx pex -r requirements.txt . -o ./build/tasks2bookstack -e tasks2bookstack.main:main --python python3
+
+build:
+	uv pip compile pyproject.toml > requirements.txt
 	podman build -t $(IMAGE_NAME) .
 	podman push $(IMAGE_NAME)
 
