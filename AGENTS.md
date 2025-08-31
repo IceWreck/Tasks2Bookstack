@@ -7,6 +7,7 @@ This tool syncs caldav tasks to a page in the bookstack wiki software.
 - Write modular, clean and fully typed modern python code.
 - Prefer logger instead of print statements.
 - Log lines and exceptions should always start with a lowercase char.
+- Log lines should not end with a period.
 - Use python 3.11+ style typing.
 - Try not to use `Any` for typing.
 
@@ -38,3 +39,9 @@ uv add <your-package-name>
 ```
 
 This installs the package and adds it to `pyproject.toml`.
+
+## Running The Application
+
+```
+make run
+```
