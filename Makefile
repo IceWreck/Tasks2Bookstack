@@ -34,6 +34,6 @@ run:
 
 run-container:
 	podman run --rm -it \
-		--name friday \
-		-v $(PWD)/config/example.yml:/app/config.yml:ro,z \
-		$(IMAGE_NAME) tasks2bookstack
+		--name tasks2bookstack \
+		-v $(PWD)/drafts/config.yaml:/app/config.yaml:ro,z \
+		$(IMAGE_NAME)
