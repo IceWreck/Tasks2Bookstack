@@ -4,7 +4,7 @@ from typing import Optional
 from caldav import DAVClient, Todo
 from icalendar import Calendar
 
-from tasks2bookstack.config import CaldavConfig
+from tasks2bookstack.config import CalDavConfig
 from tasks2bookstack.log import get_logger
 
 logger = get_logger(name=__name__)
@@ -27,7 +27,7 @@ class CalDavClient:
     A client for the Caldav server.
     """
 
-    def __init__(self, config: CaldavConfig):
+    def __init__(self, config: CalDavConfig):
         self.config = config
         self.client = DAVClient(
             url=self.config.url,

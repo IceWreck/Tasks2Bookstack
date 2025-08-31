@@ -15,7 +15,7 @@ class BookstackConfig(BaseModel):
     page_id: int
 
 
-class CaldavConfig(BaseModel):
+class CalDavConfig(BaseModel):
     """
     Configuration for the Caldav server.
     """
@@ -32,7 +32,7 @@ class Config(BaseModel):
     """
 
     bookstack: BookstackConfig
-    caldav: CaldavConfig
+    caldav: CalDavConfig
 
     @staticmethod
     def from_yaml(file_path: Path) -> "Config":
