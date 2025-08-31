@@ -1,0 +1,27 @@
+# tasks2bookstack configuration file
+
+bookstack:
+  # The URL of your Bookstack instance (e.g., https://bookstack.example.com)
+  url: ""
+
+  # Your Bookstack API Token ID
+  token_id: ""
+
+  # Your Bookstack API Token Secret
+  token_secret: ""
+
+  # The ID of the page you want to update with your tasks
+  page_id: 0
+
+caldav:
+  # The URL of your CalDAV server (e.g., https://caldav.example.com)
+  url: ""
+
+  # Your CalDAV username
+  username: ""
+
+  # Your CalDAV password
+  password: ""
+
+  # The name of the calendar you want to sync tasks from
+  calendar: ""

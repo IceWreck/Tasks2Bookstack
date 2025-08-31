@@ -1,22 +1,44 @@
-from tasks2bookstack.log import get_logger
 import yaml
-import json
-from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Dict, Type
 
-logger = get_logger(name=__name__)
+from pydantic import BaseModel
 
 
-@dataclass
-class Config:
-    ...
+class BookstackConfig(BaseModel):
+    """
+    Configuration for the Bookstack API.
+    """
+
+    url: str
+    token_id: str
+    token_secret: str
+    page_id: int
+
+
+class CaldavConfig(BaseModel):
+    """
+    Configuration for the Caldav server.
+    """
+
+    url: str
+    username: str
+    password: str
+    calendar: str
+
+
+class Config(BaseModel):
+    """
+    The main configuration for the application.
+    """
+
+    bookstack: BookstackConfig
+    caldav: CaldavConfig
 
     @staticmethod
-    def from_yaml(file_path: Path) -> "Config": ...
-
-    def to_json(self) -> str:
+    def from_yaml(file_path: Path) -> "Config":
         """
-        Returns a pretty printed JSON string of the configuration.
+        Loads the configuration from a YAML file.
         """
-        return json.dumps(asdict(self), indent=4)
+        with open(file_path, "r") as f:
+            data = yaml.safe_load(f)
+        return Config.model_validate(data)

@@ -1,5 +1,7 @@
 # Agents Knowledge
 
+This tool syncs caldav tasks to a page in the bookstack wiki software.
+
 ## Code Conventions
 
 - Write modular, clean and fully typed modern python code.
