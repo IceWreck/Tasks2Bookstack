@@ -23,5 +23,5 @@ caldav:
   # Your CalDAV password
   password: ""
 
-  # The name of the calendar you want to sync tasks from
+  # The id of the calendar you want to sync tasks from
   calendar: ""

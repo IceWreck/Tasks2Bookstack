@@ -38,3 +38,5 @@ def main() -> None:
 
     bookstack_client = BookStackClient(config.bookstack)
     bookstack_client.update_page(content)
+
+    logger.info("successfully synced tasks to bookstack")

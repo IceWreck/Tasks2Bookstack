@@ -25,7 +25,7 @@ class CalDavClient:
         """
         logger.info(f"fetching tasks from calendar '{self.config.calendar}'")
         principal = self.client.principal()
-        calendar = principal.calendar(cal_name=self.config.calendar)
+        calendar = principal.calendar(cal_id=self.config.calendar)
         todos = calendar.todos(include_completed=False)
         tasks = [str(todo.data) for todo in todos]
         logger.info(f"found {len(tasks)} tasks in calendar '{self.config.calendar}'")

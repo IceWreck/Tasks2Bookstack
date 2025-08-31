@@ -30,7 +30,7 @@ mypy:
 	mypy ./src
 
 run:
-	tasks2bookstack
+	tasks2bookstack  -c ./drafts/config.yaml
 
 run-container:
 	podman run --rm -it \
